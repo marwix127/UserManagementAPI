@@ -1,5 +1,9 @@
 # UserManagementAPI Project Documentation
 
+⚠️###To Test endpoints use authorization bearer token "mysecrettoken"###⚠️
+
+↓↓Copilot Documentation ↓↓ (Also in the file documentation.md)
+
 ## Part 1: Initial Controller Setup 🚀
 
 During the first phase of the project, I set up the ASP.NET Core Web API project named **UserManagementAPI**.  
