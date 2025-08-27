@@ -1,8 +1,8 @@
 # UserManagementAPI Project Documentation
 
-⚠️###To Test endpoints use authorization bearer token "mysecrettoken"###⚠️
+⚠️##To Test endpoints use authorization bearer token "mysecrettoken"⚠️
 
-↓↓Copilot Documentation ↓↓ (Also in the file documentation.md)
+##↓↓Copilot Documentation ↓↓ (Also in the file documentation.md)
 
 ## Part 1: Initial Controller Setup 🚀
 
