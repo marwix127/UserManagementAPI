@@ -22,9 +22,6 @@ El frontend y backend están desacoplados, comunicándose vía **RESTful API**, 
 - **Middleware personalizado**: logging, manejo de errores y validación de tokens.  
 - **CORS**: habilitado para permitir comunicación con el frontend en diferente origen.  
 
-### Base de Datos (opcional)
-- Puede usarse **SQL Server, PostgreSQL o SQLite** con **Entity Framework Core**.
-
 ---
 
 ## Arquitectura
