@@ -1,53 +1,60 @@
-# UserManagementAPI Project Documentation
+# User Management App
 
-## ⚠️To Test endpoints use authorization bearer token "mysecrettoken"⚠️
+## Descripción
+Aplicación web de gestión de usuarios desarrollada con **Blazor WebAssembly** (frontend) y **ASP.NET Core Web API** (backend).  
+Permite autenticación mediante **JWT** y operaciones CRUD sobre usuarios: crear, leer, actualizar y eliminar.  
 
-## ↓↓Copilot Documentation ↓↓ (Also in the file documentation.md)
-
-## Part 1: Initial Controller Setup 🚀
-
-During the first phase of the project, I set up the ASP.NET Core Web API project named **UserManagementAPI**.  
-
-I used **Microsoft Copilot** to scaffold the project, which helped with:  
-- Creating `Program.cs` with the basic Web API setup.  
-- Generating boilerplate code for controllers and routing.  
-
-Using Copilot, I then generated CRUD endpoints for managing users:
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /api/users` | Retrieve a list of users |
-| `GET /api/users/{id}` | Retrieve a specific user by ID |
-| `POST /api/users` | Add a new user |
-| `PUT /api/users/{id}` | Update an existing user |
-| `DELETE /api/users/{id}` | Remove a user by ID |
-
-**Testing**: I tested all endpoints using Postman to ensure they worked correctly.  
-
-**How Copilot Helped 🤖**:  
-- Suggested the structure for the `UsersController`.  
-- Generated initial CRUD methods with correct routing and return types.  
-- Saved time on boilerplate code, allowing focus on business logic.  
-
-## Part 2: Debugging Documentation 🐛🛠️
-
-After deploying the initial version, several bugs were identified. The debugging process involved fixing validation, error handling, and performance issues.
-
-**Bugs Found 🐞:**  
-- Missing validation in POST and PUT endpoints   
-- Crash when calculating `Max` with an empty list  
-- Missing try-catch blocks in endpoints   
-
-**Fixes Applied ✅:**  
-- Added `[Required]` and `[EmailAddress]` annotations  
-- Implemented error handling with try-catch blocks  *(removed later when middleware was implemented)
-- Safe logic for calculating new `Id`   
-
-**How Copilot Helped 🤖:**
-- Suggested validations using DataAnnotations  
-- Automatically inserted try-catch blocks   
-- Improved `Max()` logic by checking for empty list   
+El frontend y backend están desacoplados, comunicándose vía **RESTful API**, siguiendo un patrón cliente-servidor moderno.
 
 ---
 
-This documentation summarizes both the **initial setup** and the **debugging process**, highlighting the role of Microsoft Copilot in accelerating development and ensuring robust, reliable API functionality.
+## Tecnologías y Librerías
+
+### Frontend
+- **Blazor WebAssembly (.NET 7/8)**: SPA interactiva usando C#.  
+- **Blazored.LocalStorage**: almacenamiento del token JWT en el navegador.  
+- **HttpClient**: para llamadas HTTP a la API.  
+- **Componentes Blazor (`EditForm`, `InputText`)**: formularios y validaciones.  
+
+### Backend
+- **ASP.NET Core Web API (.NET 7/8)**: exposición de endpoints RESTful.  
+- **JWT Authentication**: protección de endpoints mediante tokens.  
+- **Middleware personalizado**: logging, manejo de errores y validación de tokens.  
+- **CORS**: habilitado para permitir comunicación con el frontend en diferente origen.  
+
+### Base de Datos (opcional)
+- Puede usarse **SQL Server, PostgreSQL o SQLite** con **Entity Framework Core**.
+
+---
+
+## Arquitectura
+- **SPA (Single Page Application)**: navegación sin recargar página.  
+- **Cliente-servidor desacoplado**: frontend y backend independientes.  
+- **Service Layer**: `UserService` centraliza llamadas HTTP y autorización.  
+- **Componentes reutilizables**: modales de creación/edición de usuarios.  
+
+---
+
+## Flujo de uso
+1. Usuario accede a `/login`.  
+2. Introduce credenciales; API devuelve **JWT** si son correctas.  
+3. Token se guarda en `localStorage` y se agrega a todas las solicitudes HTTP.  
+4. Usuario accede a `/users` y puede:
+   - Crear usuarios
+   - Editar usuarios
+   - Eliminar usuarios  
+5. Si no está autenticado, se muestra un mensaje indicando que debe iniciar sesión.  
+
+---
+
+## Buenas prácticas y metodologías
+- **Separation of Concerns (SoC)**: UI y lógica de negocio separadas.  
+- **Single Responsibility Principle (SRP)**: cada componente y servicio tiene responsabilidad única.  
+- **Patrón RESTful**: endpoints claros y consistentes (`GET`, `POST`, `PUT`, `DELETE`).  
+- **Seguridad**: autenticación JWT y middleware de autorización.  
+- **UX amigable**: mensajes de alerta, modales y estados de carga.  
+
+---
+
+## Conclusión
+Proyecto completo que demuestra habilidades en **.NET Full Stack**, integración de **Blazor con APIs REST**, manejo de **autenticación y autorización**, y buenas prácticas de **arquitectura y diseño de software**.
