@@ -30,3 +30,12 @@ F:\UserManagementAPI\obj\Debug\net9.0\refint\UserManagementAPI.dll
 F:\UserManagementAPI\obj\Debug\net9.0\UserManagementAPI.pdb
 F:\UserManagementAPI\obj\Debug\net9.0\UserManagementAPI.genruntimeconfig.cache
 F:\UserManagementAPI\obj\Debug\net9.0\ref\UserManagementAPI.dll
+F:\UserManagementAPI\obj\Debug\net9.0\UserManagementAPI.sourcelink.json
+F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+F:\UserManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

@@ -1,3 +1,4 @@
+
 namespace UserManagementApi.Middleware
 {
     public class AuthenticationMiddleware

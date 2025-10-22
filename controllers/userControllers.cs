@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 //🤖 Copilot Documentation at the end of the file 🤖
 
@@ -19,6 +20,7 @@ namespace UserManagementApi.Controllers
 
         // GET: api/users
         [HttpGet]
+        [Authorize]
         public ActionResult<IEnumerable<User>> GetAll()
         {
             return Ok(_users);
@@ -26,6 +28,7 @@ namespace UserManagementApi.Controllers
 
         // GET: api/users/1
         [HttpGet("{id}")]
+        [Authorize]
         public ActionResult<User> GetById(int id)
         {
             var user = _users.FirstOrDefault(u => u.Id == id);
@@ -35,6 +38,7 @@ namespace UserManagementApi.Controllers
 
         // POST: api/users
         [HttpPost]
+        [Authorize]
         public ActionResult<User> Create(User newUser)
         {
             if (!ModelState.IsValid)
@@ -49,6 +53,7 @@ namespace UserManagementApi.Controllers
 
         // PUT: api/users/1
         [HttpPut("{id}")]
+        [Authorize]
         public IActionResult Update(int id, User updatedUser)
         {
             if (!ModelState.IsValid)
@@ -66,6 +71,7 @@ namespace UserManagementApi.Controllers
 
         // DELETE: api/users/1
         [HttpDelete("{id}")]
+        [Authorize]
         public IActionResult Delete(int id)
         {
             var user = _users.FirstOrDefault(u => u.Id == id);
