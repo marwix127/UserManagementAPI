@@ -26,6 +26,14 @@ namespace UserManagementApi.Controllers
             return Ok(_users);
         }
 
+        // GET: api/users/health
+        [HttpGet("health")]
+        [AllowAnonymous]
+        public IActionResult Health()
+        {
+            return Ok(new { status = "Healthy", message = "API is running and accessible." });
+        }
+
         // GET: api/users/1
         [HttpGet("{id}")]
         [Authorize]

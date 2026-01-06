@@ -39,3 +39,4 @@ F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 F:\UserManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+F:\UserManagementAPI\bin\Debug\net9.0\token.json

@@ -1,15 +1,31 @@
-###
-GET http://localhost:5216/api/users
+### Health Check
+GET http://localhost:5216/api/users/health
 
-###
-GET http://localhost:5216/api/users/3
-
-###
-POST http://localhost:5216/api/users    
+### Login to get JWT Token
+# @name login
+POST http://localhost:5216/api/auth/login
 Content-Type: application/json
 
 {
+    "username": "admin",
+    "password": "1234"
+}
 
+### Get all users (Requires Token)
+# Paste the token from the login response in the Authorization header below
+GET http://localhost:5216/api/users
+Authorization: Bearer <TOKEN_HERE>
+
+### Get user by id
+GET http://localhost:5216/api/users/3
+Authorization: Bearer <TOKEN_HERE>
+
+### Create user
+POST http://localhost:5216/api/users    
+Content-Type: application/json
+Authorization: Bearer <TOKEN_HERE>
+
+{
   "name": "David",
   "email": "david@example.com"
 }
